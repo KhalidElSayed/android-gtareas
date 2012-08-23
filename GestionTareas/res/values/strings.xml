@@ -1,0 +1,30 @@
+<resources>
+
+    <string name="app_name">G.Tareas</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_screen_home">Control actividades</string>
+    <string name="title_screen_login">Iniciar sesi\u00F3n</string>
+    <string name="lab_user">Usuario</string>
+    <string name="lab_pass">Password</string>
+    <string name="but_login">Iniciar</string>
+    <string name="msg_login">Iniciando Sesi\u00F3n...</string>
+    <string name="msg_login_invalid">El Usuario o password no es correcto</string>
+    <string name="title_screen_bentrada">Bandeja entrada</string>
+    <string name="title_screen_gtareas">Gesti\u00F3n tareas</string>
+    <string name="title_panel_pendientes">Pendientes</string>
+    <string name="title_panel_realizadas">Realizadas</string>
+    <string name="title_panel_ctareas">Control tareas</string>
+    <string name="lab_name">Nombre</string>
+    <string name="lab_dir_asignada">Direcci\u00F3n asignada</string>
+    <string name="lab_fecha_limite">Fecha limite</string>
+    <string name="lab_importancia">Importancia</string>
+    <string name="lab_descripcion">Descripci\u00F3n</string>
+    <string name="but_crear">Crear</string>
+    <string name="title_screen_ctarea">Crear tarea</string>
+    <string name="but_guardar">Guardar</string>
+    <string name="lab_id_tarea">Id Tarea</string>
+    <string name="lab_estado">Estado</string>
+    <string name="lab_comentario">Comentarios</string>
+    <string name="title_screen_editar_tarea">Edicion tarea</string>
+
+</resources>

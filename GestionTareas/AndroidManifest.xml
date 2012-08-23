@@ -1,0 +1,48 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stefanini.gestiontareas"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="GTareasApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_screen_home" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_screen_login" >
+            <intent-filter android:label="@string/app_name" >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BEntradaActivity"
+            android:label="@string/title_screen_bentrada" >
+        </activity>
+        <activity
+            android:name=".GTareasActivity"
+            android:label="@string/title_screen_gtareas" >
+        </activity>
+        <activity
+            android:name="CrearTareaActivity"
+            android:label="@string/title_screen_ctarea" >
+        </activity>
+        <activity
+            android:name="EditarTareaActivity"
+            android:label="@string/title_screen_editar_tarea" >
+        </activity>
+    </application>
+
+</manifest>
