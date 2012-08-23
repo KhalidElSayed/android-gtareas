@@ -10,13 +10,12 @@ import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 import org.xmlpull.v1.XmlPullParserException;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -95,6 +94,17 @@ public class GTareasActivity extends SherlockFragmentActivity {
 		}
 		startActivity(intent);
 		return true;
+	}
+
+	@Override
+	protected void onNewIntent(Intent intent) {
+		// FIXME armar objeto tarea con los datos de la nueva tarea y
+		// enviarselo a la lista de tareas del fragment
+		Log.d("onNewIntent", intent.toString());
+		if (getSupportFragmentManager().findFragmentByTag("tareas") != null) {
+			Log.d("fragment no null", "fragment");
+		}
+
 	}
 
 	private class DescargarDataToSpinners extends

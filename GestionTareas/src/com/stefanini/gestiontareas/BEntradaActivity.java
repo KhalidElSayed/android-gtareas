@@ -1,7 +1,5 @@
 package com.stefanini.gestiontareas;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;

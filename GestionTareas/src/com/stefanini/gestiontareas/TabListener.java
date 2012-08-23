@@ -1,13 +1,11 @@
 package com.stefanini.gestiontareas;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.ActionBar.Tab;
-import com.stefanini.util.AppConstants;
-
 import android.app.Activity;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.ActionBar.Tab;
 
 public class TabListener<T extends Fragment> implements ActionBar.TabListener {
 

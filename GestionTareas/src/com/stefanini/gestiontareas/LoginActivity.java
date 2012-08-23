@@ -10,7 +10,6 @@ import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 import org.xmlpull.v1.XmlPullParserException;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -25,9 +24,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.stefanini.util.AppConstants;
 
-public class LoginActivity extends Activity implements OnClickListener {
+public class LoginActivity extends SherlockFragmentActivity implements
+		OnClickListener {
 
 	// ///Constants/////
 	private final String SOAP_ACTION_VALIDATE_USER = "http://IT.Mindefensa.WebService.CtrlActViceministerio.com/ValidadCredencialesUsuario";
@@ -47,6 +48,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setTheme(HomeActivity.THEME);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.login_screen);
 		init();

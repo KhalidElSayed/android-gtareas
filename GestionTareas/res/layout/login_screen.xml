@@ -2,45 +2,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="8dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="8dp" >
+    android:background="@color/background_app" >
 
-    <TextView
-        android:id="@+id/lab_user"
+    <RelativeLayout
+        android:id="@+id/panel_logo_min"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lab_user"      
-        tools:context=".HomeActivity" />
+        android:background="@drawable/background_logo_min" >
 
-    <EditText
-        android:id="@+id/txt_user"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo_min" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/panel_login"
+        style="@style/padding_left_right"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lab_user"
-        android:inputType="text" />
+        android:layout_below="@+id/panel_logo_min"
+        android:layout_marginTop="16dp" >
 
-    <TextView
-        android:id="@+id/lab_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_user"
-        android:text="@string/lab_pass"
-        tools:context=".HomeActivity" />
+        <TextView
+            android:id="@+id/lab_user"
+            style="@style/medium_labs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lab_user"
+            tools:context=".HomeActivity" />
 
-    <EditText
-        android:id="@+id/txt_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lab_pass"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/txt_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lab_user"
+            android:layout_marginTop="2dp"
+            android:inputType="text" />
 
-    <Button
-        android:id="@+id/but_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_pass"
-        android:text="@string/but_login" />
+        <TextView
+            android:id="@+id/lab_pass"
+            style="@style/medium_labs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_user"
+            android:layout_marginTop="4dp"
+            android:text="@string/lab_pass"
+            tools:context=".HomeActivity" />
+
+        <EditText
+            android:id="@+id/txt_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lab_pass"
+            android:layout_marginTop="2dp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/but_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_pass"
+            android:layout_marginTop="4dp"
+            android:text="@string/but_login" />
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -16,11 +16,12 @@
         android:label="@string/app_name" >
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_screen_home" >
+            android:label="@string/title_screen_home"
+            android:launchMode="singleTask" >
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_screen_login" >
+            android:label="@string/title_screen_gtareas" >
             <intent-filter android:label="@string/app_name" >
                 <action android:name="android.intent.action.MAIN" />
 

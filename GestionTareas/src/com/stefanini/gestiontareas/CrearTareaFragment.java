@@ -15,6 +15,7 @@ import org.ksoap2.transport.HttpTransportSE;
 import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -317,7 +318,14 @@ public class CrearTareaFragment extends SherlockFragment implements
 			if (isThereANewTask) {
 				Toast.makeText(getActivity(), "Se ha creado una nueva tarea",
 						Toast.LENGTH_LONG).show();
-				getActivity().finish();
+				Intent intent = new Intent();
+				intent.setClass(getActivity(), GTareasActivity.class);
+				// FIXME override the onNewIntent() in GTareasActivity to
+				// proccess the new task created
+				// intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+				// | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
 			} else {
 				Toast.makeText(getActivity(), "La tarea no se ha creado",
 						Toast.LENGTH_LONG).show();
