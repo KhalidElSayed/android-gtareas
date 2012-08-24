@@ -51,6 +51,8 @@ public class LoginActivity extends SherlockFragmentActivity implements
 		setTheme(HomeActivity.THEME);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.login_screen);
+		getSupportActionBar().setBackgroundDrawable(
+				getResources().getDrawable(R.drawable.bg_action_bar));
 		init();
 	}
 

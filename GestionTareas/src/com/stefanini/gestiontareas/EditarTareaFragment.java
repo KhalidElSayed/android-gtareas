@@ -96,16 +96,14 @@ public class EditarTareaFragment extends SherlockFragment implements
 			}
 			mTxtComentario.setText(arguments
 					.getString(AppConstants.KEY_COMENTARIOS_TAREA));
-			
+
 			boolean isToEdit = arguments.getBoolean(AppConstants.KEY_EDIT,
 					false);
 			if (!isToEdit) {
 				mSpinEstado.setEnabled(false);
 				mTxtComentario.setInputType(InputType.TYPE_NULL);
 				mTxtComentario.setFocusableInTouchMode(false);
-				LinearLayout bottomBar = (LinearLayout) view
-						.findViewById(R.id.bottom_bar);
-				bottomBar.setVisibility(View.GONE);
+				mButGuardar.setVisibility(View.GONE);
 			}
 		}
 		return view;

@@ -35,6 +35,8 @@ public class HomeActivity extends SherlockFragmentActivity implements
 		mImgButBEntrada.setOnClickListener(this);
 
 		ActionBar actionBar = getSupportActionBar();
+		actionBar.setBackgroundDrawable(getResources().getDrawable(
+				R.drawable.bg_action_bar));
 		actionBar.setDisplayShowTitleEnabled(true);
 
 		if (app.ismIsADirector()) {

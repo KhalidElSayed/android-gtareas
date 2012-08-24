@@ -2,15 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="4dp"
-    android:paddingTop="4dp" >
+    android:background="@drawable/bg_row_tarea"
+    android:padding="2dp" >
 
     <TextView
         android:id="@+id/lab_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        
-        android:text="title" />
+        android:text="title"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/lab_date"
@@ -18,14 +20,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/lab_title"
-        android:text="date" />
+        android:text="date"
+        android:textColor="#425f8f"
+        android:textSize="12sp"
+        android:textStyle="normal" />
 
     <TextView
         android:id="@+id/lab_dir_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lab_title"
-        android:text="direccion" />
+        android:text="direccion"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:textStyle="normal" />
 
     <TextView
         android:id="@+id/lab_descripcion"
@@ -35,6 +43,9 @@
         android:ellipsize="end"
         android:lines="1"
         android:scrollHorizontally="true"
-        android:text="descripcion" />
+        android:text="descripcion"
+        android:textColor="#747577"
+        android:textSize="12sp"
+        android:textStyle="normal" />
 
 </RelativeLayout>

@@ -7,14 +7,14 @@
     <RelativeLayout
         android:id="@+id/panel_logo_min"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_logo_min" >
+        android:layout_height="71dp"
+        android:background="@drawable/background_logo_min"
+        android:gravity="center_vertical" >
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="4dp"
             android:adjustViewBounds="true"
             android:src="@drawable/logo_min" />
     </RelativeLayout>
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/panel_logo_min"
-        android:layout_marginTop="16dp" >
+        android:layout_marginTop="18dp" >
 
         <TextView
             android:id="@+id/lab_user"
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_user"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:text="@string/lab_pass"
             tools:context=".HomeActivity" />
 
@@ -58,16 +58,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/lab_pass"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="4dp"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/but_login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_below="@+id/txt_pass"
-            android:layout_marginTop="4dp"
-            android:text="@string/but_login" />
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_btn"
+            android:text="@string/but_login"
+            android:textColor="@android:color/white" />
     </RelativeLayout>
 
 </RelativeLayout>

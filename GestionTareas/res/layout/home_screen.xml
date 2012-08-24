@@ -1,28 +1,52 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/padding_left_right"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_app"
-    android:orientation="vertical" >
+    android:background="@color/background_app" >
 
-    <ImageButton
-        android:id="@+id/img_but_gtareas"
+    <RelativeLayout
+        android:id="@+id/panel_logo_min"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="@drawable/background_logo_min"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo_min" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/panel_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:src="@drawable/icon_tareas"
-        android:visibility="gone" />
+        android:layout_below="@+id/panel_logo_min"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
 
-    <ImageButton
-        android:id="@+id/img_but_bentrada"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:src="@drawable/icon_bandeja"
-        android:visibility="gone" />
+        <ImageButton
+            android:id="@+id/img_but_gtareas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_tareas"
+            android:visibility="gone" />
 
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/img_but_bentrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_bandeja"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

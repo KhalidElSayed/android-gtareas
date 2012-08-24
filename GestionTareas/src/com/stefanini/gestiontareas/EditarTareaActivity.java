@@ -17,6 +17,7 @@ public class EditarTareaActivity extends SherlockFragmentActivity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		ActionBar actionBar = getSupportActionBar();
+		actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_action_bar));
 		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE
 				| ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_HOME_AS_UP);
 		actionBar.setDisplayShowTitleEnabled(true);

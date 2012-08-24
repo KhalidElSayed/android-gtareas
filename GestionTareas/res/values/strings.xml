@@ -6,7 +6,7 @@
     <string name="title_screen_login">Iniciar sesi\u00F3n</string>
     <string name="lab_user">Usuario</string>
     <string name="lab_pass">Password</string>
-    <string name="but_login">Iniciar</string>
+    <string name="but_login">Ingresar</string>
     <string name="msg_login">Iniciando Sesi\u00F3n...</string>
     <string name="msg_login_invalid">El Usuario o password no es correcto</string>
     <string name="title_screen_bentrada">Bandeja entrada</string>

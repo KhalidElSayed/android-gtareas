@@ -5,74 +5,77 @@
     android:layout_height="match_parent"
     android:background="@color/background_app" >
 
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp" >
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_logo_min"
+        android:fadingEdge="none"
+        android:padding="8dp"
+        android:requiresFadingEdge="none"
+        android:scrollbars="none" >
 
-        <EditText
-            android:id="@+id/txt_title"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="@string/lab_name" />
+            android:gravity="center_horizontal" >
 
-        <EditText
-            android:id="@+id/txt_fecha_limite"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_title"
-            android:layout_marginTop="4dp"
-            android:clickable="true"
-            android:focusableInTouchMode="false"
-            android:hint="@string/lab_fecha_limite"
-            android:inputType="none" />
+            <EditText
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="@string/lab_name" />
 
-        <Spinner
-            android:id="@+id/spin_dir_asig"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_fecha_limite"
-            android:layout_marginTop="4dp"
-            android:hint="@string/lab_dir_asignada" />
+            <EditText
+                android:id="@+id/txt_fecha_limite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_title"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:hint="@string/lab_fecha_limite"
+                android:inputType="none" />
 
-        <Spinner
-            android:id="@+id/spin_importancia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/spin_dir_asig"
-            android:layout_marginTop="4dp"
-            android:hint="@string/lab_importancia" />
+            <Spinner
+                android:id="@+id/spin_dir_asig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_fecha_limite"
+                android:layout_marginTop="4dp"
+                android:hint="@string/lab_dir_asignada" />
 
-        <EditText
-            android:id="@+id/txt_descripcion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/spin_importancia"
-            android:layout_marginTop="4dp"
-            android:gravity="top|left"
-            android:hint="@string/lab_descripcion"
-            android:inputType="textMultiLine"
-            android:lines="3" />
-    </RelativeLayout>
+            <Spinner
+                android:id="@+id/spin_importancia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spin_dir_asig"
+                android:layout_marginTop="4dp"
+                android:hint="@string/lab_importancia" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:background="#8A8479"
-        android:gravity="center_vertical"
-        android:padding="4dp" >
+            <EditText
+                android:id="@+id/txt_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spin_importancia"
+                android:layout_marginTop="4dp"
+                android:gravity="top|left"
+                android:hint="@string/lab_descripcion"
+                android:inputType="textMultiLine"
+                android:lines="3" />
 
-        <Button
-            android:id="@+id/but_crear"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="#CABFB2"
-            android:text="@string/but_crear"
-            android:textColor="@android:color/black" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/but_crear"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/txt_descripcion"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_btn"
+                android:text="@string/but_crear"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

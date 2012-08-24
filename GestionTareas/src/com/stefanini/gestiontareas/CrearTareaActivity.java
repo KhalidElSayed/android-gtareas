@@ -17,6 +17,8 @@ public class CrearTareaActivity extends SherlockFragmentActivity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		ActionBar actionBar = getSupportActionBar();
+		actionBar.setBackgroundDrawable(getResources().getDrawable(
+				R.drawable.bg_action_bar));
 		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE
 				| ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_HOME_AS_UP);
 		actionBar.setDisplayShowTitleEnabled(true);
@@ -36,7 +38,8 @@ public class CrearTareaActivity extends SherlockFragmentActivity {
 		case android.R.id.home:
 			Intent intent = new Intent();
 			intent.setClass(getApplication(), GTareasActivity.class);
-			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+					| Intent.FLAG_ACTIVITY_SINGLE_TOP);
 			startActivity(intent);
 			break;
 
