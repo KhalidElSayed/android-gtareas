@@ -23,12 +23,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.stefanini.util.AppConstants;
+import com.stefanini.util.AppStatus;
 
 public class EditarTareaFragment extends SherlockFragment implements
 		OnClickListener {
@@ -115,7 +115,15 @@ public class EditarTareaFragment extends SherlockFragment implements
 	}
 
 	public void onClick(View v) {
-		new ModificarTareaTask().execute();
+		if (AppStatus.isOnline(getActivity())) {
+			new ModificarTareaTask().execute();
+		} else {
+			Toast.makeText(
+					getActivity(),
+					"Sin conexion a internet!, por favor verifique su conexion.",
+					Toast.LENGTH_LONG).show();
+		}
+
 	}
 
 	private class ModificarTareaTask extends AsyncTask<Void, Void, Boolean> {

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle" >
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <gradient
-        android:endColor="#ececee"
-        android:gradientRadius="90"
-        android:startColor="#f9f9f9"
-        android:type="linear" />
+    <item android:state_pressed="true"><shape android:shape="rectangle">
+            <gradient android:endColor="#666666" android:gradientRadius="90" android:startColor="#808080" android:type="linear" />
+        </shape></item>
+    <item android:state_focused="true"><shape android:shape="rectangle">
+            <gradient android:endColor="#666666" android:gradientRadius="90" android:startColor="#808080" android:type="linear" />
+        </shape></item>
+    <item><shape android:shape="rectangle">
+            <gradient android:endColor="#ececee" android:gradientRadius="90" android:startColor="#f9f9f9" android:type="linear" />
+        </shape></item>
 
-</shape>
+</selector>

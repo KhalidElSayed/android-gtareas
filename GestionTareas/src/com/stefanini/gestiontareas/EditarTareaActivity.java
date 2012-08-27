@@ -1,7 +1,6 @@
 package com.stefanini.gestiontareas;
 
 import android.os.Bundle;
-import android.view.Window;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
@@ -13,8 +12,7 @@ public class EditarTareaActivity extends SherlockFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setTheme(HomeActivity.THEME);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		setTheme(HomeActivity.THEME);
 
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_action_bar));

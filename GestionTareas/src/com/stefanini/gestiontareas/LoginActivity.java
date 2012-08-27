@@ -10,15 +10,16 @@ import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 import org.xmlpull.v1.XmlPullParserException;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.stefanini.util.AppConstants;
+import com.stefanini.util.AppStatus;
 
 public class LoginActivity extends SherlockFragmentActivity implements
 		OnClickListener {
@@ -49,7 +51,6 @@ public class LoginActivity extends SherlockFragmentActivity implements
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setTheme(HomeActivity.THEME);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.login_screen);
 		getSupportActionBar().setBackgroundDrawable(
 				getResources().getDrawable(R.drawable.bg_action_bar));
@@ -69,6 +70,10 @@ public class LoginActivity extends SherlockFragmentActivity implements
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.but_login:
+
+			if (!AppStatus.isOnline(LoginActivity.this)) {
+				mostrarAlertDialog();
+			}
 
 			if (hayDatosEntradaValidos()) {
 				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -263,4 +268,18 @@ public class LoginActivity extends SherlockFragmentActivity implements
 		}
 	}
 
+	public void mostrarAlertDialog() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setMessage(
+				"Sin conexion a internet, por favor habilite una conexion.")
+				.setCancelable(false)
+				.setPositiveButton("Aceptar",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.dismiss();
+							}
+						});
+		AlertDialog alert = builder.create();
+		alert.show();
+	}
 }

@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.stefanini.util.AppConstants;
+import com.stefanini.util.AppStatus;
 
 public class TareasFragment extends SherlockFragment implements
 		OnItemClickListener {
@@ -65,7 +66,15 @@ public class TareasFragment extends SherlockFragment implements
 		super.onActivityCreated(savedInstanceState);
 
 		if (mListTareas == null) {
-			new ConsultarTareasTask().execute();
+			if (AppStatus.isOnline(getActivity())) {
+				new ConsultarTareasTask().execute();
+			} else {
+				Toast.makeText(
+						getActivity(),
+						"Sin conexion a internet!, por favor verifique su conexion.",
+						Toast.LENGTH_LONG).show();
+			}
+
 		}
 	}
 

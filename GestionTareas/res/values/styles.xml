@@ -1,6 +1,6 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppTheme" parent="android:Theme.Light" />
+    <style name="AppTheme" parent="@style/Theme.Sherlock" />
 
     <style name="medium_labs" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@android:color/white</item>
@@ -26,6 +26,16 @@
     <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse">
         <item name="background">@drawable/bg_action_bar</item>
         <item name="android:background">@drawable/bg_action_bar</item>
+    </style>
+
+    <!-- style for the tabs -->
+    <style name="MyActionBarTabStyle" parent="@style/Theme.Sherlock">
+        <item name="actionBarTabBarStyle">@style/customActionBarTabStyle</item>
+        <item name="android:actionBarTabBarStyle">@style/customActionBarTabStyle</item>
+    </style>
+
+    <style name="customActionBarTabStyle" parent="Widget.Sherlock.ActionBar.TabView">
+        <item name="android:background">@color/list_divider</item>
     </style>
 
 </resources>

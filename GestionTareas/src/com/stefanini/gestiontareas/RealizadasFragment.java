@@ -24,6 +24,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import com.actionbarsherlock.app.SherlockFragment;
 import com.stefanini.util.AppConstants;
+import com.stefanini.util.AppStatus;
 
 public class RealizadasFragment extends SherlockFragment implements
 		OnItemClickListener {
@@ -65,7 +66,14 @@ public class RealizadasFragment extends SherlockFragment implements
 		String userFullName = ((GTareasApplication) getActivity()
 				.getApplication()).getmUserFullName();
 		if (mListTareas == null && userFullName != null) {
-			new ConsultarTareasPendientesTask().execute(userFullName);
+			if (AppStatus.isOnline(getActivity())) {
+				new ConsultarTareasPendientesTask().execute(userFullName);
+			} else {
+				Toast.makeText(
+						getActivity(),
+						"Sin conexion a internet!, por favor verifique su conexion.",
+						Toast.LENGTH_LONG).show();
+			}
 		}
 
 	}

@@ -2,7 +2,6 @@ package com.stefanini.gestiontareas;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Window;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
@@ -16,7 +15,6 @@ public class BEntradaActivity extends SherlockFragmentActivity {
 		super.onCreate(savedInstanceState);
 
 		setTheme(HomeActivity.THEME);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setBackgroundDrawable(getResources().getDrawable(

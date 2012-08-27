@@ -33,6 +33,7 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.stefanini.db.DBAdapter;
 import com.stefanini.util.AppConstants;
+import com.stefanini.util.AppStatus;
 
 public class CrearTareaFragment extends SherlockFragment implements
 		OnClickListener, DatePickerFragment.onDataSetChangeListener {
@@ -162,7 +163,15 @@ public class CrearTareaFragment extends SherlockFragment implements
 			return;
 		}
 
-		new CrearTareaTask().execute();
+		if (AppStatus.isOnline(getActivity())) {
+			new CrearTareaTask().execute();
+		} else {
+			Toast.makeText(
+					getActivity(),
+					"Sin conexion a internet!, por favor verifique su conexion.",
+					Toast.LENGTH_LONG).show();
+		}
+
 	}
 
 	public void onDateChanged() {
