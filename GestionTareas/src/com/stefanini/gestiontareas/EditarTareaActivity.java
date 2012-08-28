@@ -11,11 +11,12 @@ public class EditarTareaActivity extends SherlockFragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		setTheme(HomeActivity.THEME);
 		super.onCreate(savedInstanceState);
-//		setTheme(HomeActivity.THEME);
 
 		ActionBar actionBar = getSupportActionBar();
-		actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg_action_bar));
+		actionBar.setBackgroundDrawable(getResources().getDrawable(
+				R.drawable.bg_action_bar));
 		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE
 				| ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_HOME_AS_UP);
 		actionBar.setDisplayShowTitleEnabled(true);

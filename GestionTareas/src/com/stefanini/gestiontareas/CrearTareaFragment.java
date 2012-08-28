@@ -179,7 +179,7 @@ public class CrearTareaFragment extends SherlockFragment implements
 		mTxtFechaLimite.setText(((mDatePicker.mDay < 10) ? "0"
 				+ mDatePicker.mDay : mDatePicker.mDay + "")
 				+ "-"
-				+ ((month < 10) ? "0" + month : mDatePicker.mMonth + "")
+				+ ((month < 10) ? "0" + month : month + "")
 				+ "-" + mDatePicker.mYear);
 	}
 
@@ -276,7 +276,7 @@ public class CrearTareaFragment extends SherlockFragment implements
 			// fechalimite
 			int month = mDatePicker.mMonth + 1;
 			String strDate = (mDatePicker.mYear + "-"
-					+ ((month < 10) ? "0" + month : mDatePicker.mMonth + "")
+					+ ((month < 10) ? "0" + month : month + "")
 					+ "-" + ((mDatePicker.mDay < 10) ? "0" + mDatePicker.mDay
 					: mDatePicker.mDay + ""));
 			p = new PropertyInfo();

@@ -49,8 +49,8 @@ public class LoginActivity extends SherlockFragmentActivity implements
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
 		setTheme(HomeActivity.THEME);
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login_screen);
 		getSupportActionBar().setBackgroundDrawable(
 				getResources().getDrawable(R.drawable.bg_action_bar));

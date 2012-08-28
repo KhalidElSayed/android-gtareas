@@ -34,8 +34,8 @@ public class GTareasActivity extends SherlockFragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		setTheme(HomeActivity.THEME);
 		super.onCreate(savedInstanceState);
-		 setTheme(HomeActivity.THEME);
 
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setBackgroundDrawable(getResources().getDrawable(

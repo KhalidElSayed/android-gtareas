@@ -5,7 +5,7 @@
 
     <uses-sdk
         android:minSdkVersion="7"
-        android:targetSdkVersion="15" />
+        android:targetSdkVersion="16" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,7 +17,7 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_screen_home"
-            android:launchMode="singleTask" >
+            android:launchMode="singleTask" android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".LoginActivity"

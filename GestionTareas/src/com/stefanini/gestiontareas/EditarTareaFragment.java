@@ -175,6 +175,7 @@ public class EditarTareaFragment extends SherlockFragment implements
 			p = new PropertyInfo();
 			p.setType(PropertyInfo.STRING_CLASS);
 			p.setName("comentarios");
+			String comment = mTxtComentario.getText().toString();
 			p.setValue(mTxtComentario.getText().toString());
 			request.addProperty(p);
 			// estado

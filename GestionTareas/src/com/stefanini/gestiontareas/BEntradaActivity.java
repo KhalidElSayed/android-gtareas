@@ -12,9 +12,8 @@ public class BEntradaActivity extends SherlockFragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
 		setTheme(HomeActivity.THEME);
+		super.onCreate(savedInstanceState);
 
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setBackgroundDrawable(getResources().getDrawable(

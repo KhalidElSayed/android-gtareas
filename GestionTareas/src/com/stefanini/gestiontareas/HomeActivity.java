@@ -14,15 +14,15 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 public class HomeActivity extends SherlockFragmentActivity implements
 		OnClickListener {
 
-	public static int THEME = R.style.Theme_Sherlock;
+	public static int THEME = R.style.Theme_Styled;
 
 	private ImageButton mImgButGTareas;
 	private ImageButton mImgButBEntrada;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
 		setTheme(THEME);
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home_screen);
 
 		GTareasApplication app = (GTareasApplication) getApplication();
