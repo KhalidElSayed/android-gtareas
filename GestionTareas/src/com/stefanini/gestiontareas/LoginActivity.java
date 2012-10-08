@@ -73,6 +73,7 @@ public class LoginActivity extends SherlockFragmentActivity implements
 
 			if (!AppStatus.isOnline(LoginActivity.this)) {
 				mostrarAlertDialog();
+				return;
 			}
 
 			if (hayDatosEntradaValidos()) {

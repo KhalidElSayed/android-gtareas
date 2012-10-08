@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.PropertyInfo;
 import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapPrimitive;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 import org.xmlpull.v1.XmlPullParserException;
@@ -138,8 +139,17 @@ public class RealizadasFragment extends SherlockFragment implements
 					tarea.fechaLimiteDate = TareaActividadCT
 							.getDateFromString(soapPojo
 									.getPropertyAsString("FechaLimite"));
-					tarea.comentarioResponsable = soapPojo
-							.getPropertyAsString("ComentarioResponsable");
+					// comentario responsable
+					PropertyInfo pi = new PropertyInfo();
+					// 3 = ComentarioResponsable index
+					soapPojo.getPropertyInfo(3, pi);
+					if (pi.getType() == SoapPrimitive.class) {
+						tarea.comentarioResponsable = pi.getValue().toString();
+					} else {
+						tarea.comentarioResponsable = "";
+					}
+					// tarea.comentarioResponsable = soapPojo
+					// .getPropertyAsString("ComentarioResponsable");
 					tarea.fechaCulminacionString = soapPojo
 							.getPropertyAsString("FechaDeCulminacion");
 					tarea.fechaCulminacionDate = TareaActividadCT

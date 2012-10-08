@@ -17,6 +17,7 @@ public class AppStatus {
 			return false;
 		if (!i.isAvailable())
 			return false;
+
 		return true;
 	}
 }

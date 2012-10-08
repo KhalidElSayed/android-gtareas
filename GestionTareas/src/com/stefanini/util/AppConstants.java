@@ -18,10 +18,10 @@ public interface AppConstants {
 		// nueva ip 190.60.245.41
 		// anterior ip 172.16.11.107
 		String SOAP_NAMESPACE = "http://IT.Mindefensa.WebService.CtrlActViceministerio.com/";
-		String URL_USUARIOS_WS = "http://172.16.11.107:300/Usuarios.asmx?WSDL";
-		String URL_VICIMINISTERIOS_WS = "http://172.16.11.107:300/Viceministerios.asmx?WSDL";
-		String URL_DIRECCION_VICEMINISTERIOS_WS = "http://172.16.11.107:300/DireccionesViceministerio.asmx?WSDL";
-		String URL_TAREAS_WS = "http://172.16.11.107:300/Tareas.asmx?WSDL";
+		String URL_USUARIOS_WS = "http://190.60.245.41:300/Usuarios.asmx?WSDL";
+		String URL_VICIMINISTERIOS_WS = "http://190.60.245.41:300/Viceministerios.asmx?WSDL";
+		String URL_DIRECCION_VICEMINISTERIOS_WS = "http://190.60.245.41:300/DireccionesViceministerio.asmx?WSDL";
+		String URL_TAREAS_WS = "http://190.60.245.41:300/Tareas.asmx?WSDL";
 	}
 
 	public interface DataBase {

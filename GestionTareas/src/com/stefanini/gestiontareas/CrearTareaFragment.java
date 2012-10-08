@@ -149,7 +149,7 @@ public class CrearTareaFragment extends SherlockFragment implements
 	}
 
 	private void crearTarea() {
-		if (!isValidateInputData()) {
+		if (!isValidInputData()) {
 			Toast.makeText(getActivity(),
 					"Por favor ingrese todos los datos solicitados",
 					Toast.LENGTH_LONG).show();
@@ -183,7 +183,7 @@ public class CrearTareaFragment extends SherlockFragment implements
 				+ "-" + mDatePicker.mYear);
 	}
 
-	private boolean isValidateInputData() {
+	private boolean isValidInputData() {
 		return !mTxtNombre.getText().toString().equals("")
 				&& !mTxtFechaLimite.getText().toString().equals("")
 				&& !mTxtDescripcion.getText().toString().equals("");

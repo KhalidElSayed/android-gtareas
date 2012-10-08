@@ -1,5 +1,7 @@
 package com.stefanini.gestiontareas;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -8,6 +10,8 @@ import com.actionbarsherlock.view.MenuItem;
 import com.stefanini.util.AppConstants;
 
 public class EditarTareaActivity extends SherlockFragmentActivity {
+
+	private boolean isToEdit;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,7 @@ public class EditarTareaActivity extends SherlockFragmentActivity {
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
 			actionBar.setTitle(extras.getString(AppConstants.KEY_NAME_TAREA));
+			isToEdit = extras.getBoolean(AppConstants.KEY_EDIT, false);
 		}
 
 		if (savedInstanceState == null) {
@@ -50,5 +55,33 @@ public class EditarTareaActivity extends SherlockFragmentActivity {
 			break;
 		}
 		return true;
+	}
+
+	@Override
+	public void onBackPressed() {
+		if (isToEdit) {
+			mostrarAlertDialog();
+		} else {
+			super.onBackPressed();
+		}
+	}
+
+	public void mostrarAlertDialog() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setMessage(
+				"Esta seguro de salir ?, los cambios aun no han sido guardados.")
+				.setCancelable(false)
+				.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						EditarTareaActivity.this.finish();
+					}
+				})
+				.setNegativeButton("No", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						dialog.cancel();
+					}
+				});
+		AlertDialog alert = builder.create();
+		alert.show();
 	}
 }
